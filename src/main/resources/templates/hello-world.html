@@ -5,12 +5,25 @@
     <meta charset="UTF-8">
     <title th:text="${message3}">Thymeleaf Hello World Example</title>
 </head>
-    <body>
+    <body th:style="'background-color:' + ${boja}">
+    <h1>Samo ovaj tekst e izvorno upisan u hello-world.html </h1>
         <p th:text="${message2}"></p>
 
         <h2 th:text="${message}"></h2>
 
         <h2 th:text="${message1}"></h2>
+
+        <form method="get" action="/boja">
+            <button type="submit">Promijeni boju u zeleno</button>
+        </form>
+
+        <form method="get" action="/boja1">
+            <button type="submit">Promijeni boju u zuto</button>
+        </form>
+
+        <form method="get" action="/povratak">
+            <button type="submit">Vrati se na home page</button>
+        </form>
 
     </body>
 </html>
