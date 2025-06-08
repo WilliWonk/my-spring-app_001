@@ -59,6 +59,9 @@ public class UserController {
 
     @GetMapping("/users")
     public String users( Model model){
+        String pesma1 = "jedna mala nije znala sta je ljubav to,";
+        String pesma2 = "pitala je svakog dana ko bi joj reko!";
+
         User admin = new User("Admin"
                 , "ad@gmail.com"
                 , "ADMIN"
@@ -76,6 +79,8 @@ public class UserController {
         users.add(rames);
         users.add(meena);
         model.addAttribute("users", users);
+        model.addAttribute("pesma1", pesma1);
+        model.addAttribute("pesma2", pesma2);
         return "users";
     }
 

@@ -9,7 +9,7 @@
         rel="stylesheet" />
 </head>
 <body>
-<table border="1">
+<table border="2">
   <thead>
   <tr>
     <th>Name</th>
@@ -27,11 +27,18 @@
   </tr>
   </tbody>
 </table>
-
+  <br><br>
+    <h1 draggable="true" th:text="${pesma1}" style="color: blueviolet;"></h1>
+    <h1 th:text="${pesma2}" 
+    style="
+      text-decoration: darkorange;
+      color: rgb(238, 106, 155);
+      border: black;
+      font-style: italic;
+      "></h1>
   <br><br>
   <a th:href="@{/variable-expression}">variable-expression</a> <br>
   <a th:href="@{/selection-expression}">selection-expression</a> <br>
   <a th:href="@{/message-expression}">message-expression</a> <br>
-
 </body>
 </html>
